@@ -43,7 +43,7 @@ const AddLedger = (props) => {
                 chqDate:entry.chqDate,
                 chequeNo:entry.chequeNo,
                 debit:entry.debit,
-                ammount:entry.Payment
+                ammount:parseFloat(entry.Payment)
             });
             console.log(res)
             console.log(res.data.data)
@@ -89,7 +89,7 @@ const AddLedger = (props) => {
                         value={entry.chqDate}
                         onChange={handleChange}
                         style={{ borderWidth: 0.1, width: '100%', height: 35, paddingLeft: 10, marginBottom: 10 }}
-                        type='text'
+                        type='date'
                     />
                     <label htmlFor="chequeNo" >Cheque No</label>
                     <input

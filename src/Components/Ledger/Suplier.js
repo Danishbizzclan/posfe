@@ -134,7 +134,7 @@ export default function SuplierLedger(props) {
                                         </TableCell>
                                         <TableCell >{row.Particular}</TableCell>
                                         <TableCell >{row.ChequeNo}</TableCell>
-                                        <TableCell >{row.ChequeDate}</TableCell>
+                                        <TableCell >{new Date(row.ChequeDate).toLocaleDateString('en-US')}</TableCell>
                                         <TableCell >{row.Debit}</TableCell>
                                         <TableCell >{row.Credit}</TableCell>
                                         <TableCell >{row.Balance}</TableCell>
