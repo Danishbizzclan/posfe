@@ -156,12 +156,12 @@ export default function EnhancedTable() {
                                         <TableCell component="th" scope="row">
                                             {index + 1011}
                                         </TableCell>
-                                        <TableCell >{row.From}</TableCell>
-                                        <TableCell >{row.Name}</TableCell>
-                                        <TableCell >{row.Details}</TableCell>
-                                        <TableCell >{row.PaidAmount}</TableCell>
-                                        <TableCell >{row.Date.split('T')[0]}</TableCell>
-                                        <TableCell >{row.RemaingBalance}</TableCell>
+                                        <TableCell >{row?.From}</TableCell>
+                                        <TableCell >{row?.Name}</TableCell>
+                                        <TableCell >{row?.Details}</TableCell>
+                                        <TableCell >{row?.PaidAmount}</TableCell>
+                                        <TableCell >{row?.Date?.split('T')[0]}</TableCell>
+                                        <TableCell >{row?.RemaingBalance}</TableCell>
 
                                     </TableRow>
                                 ))}

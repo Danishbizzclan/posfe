@@ -25,9 +25,9 @@ export default function CustomCountCard(props) {
                                     />
                                     {/* {props.count} */}
                                 </p>
-                                    <ArrowDropUpIcon
+                                    {/* <ArrowDropUpIcon
                                         style={{ marginTop: 10, overflow: 'auto' }}
-                                    />
+                                    /> */}
                                 </Grid>
                                 <Grid xs={3}></Grid>
                                 <Grid xs={3}>

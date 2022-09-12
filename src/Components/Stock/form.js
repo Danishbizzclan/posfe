@@ -82,11 +82,11 @@ export default function Form() {
             product_name: prodcutName,
             supplier_name: supplierName,
             buy_date: buyDate,
-            product_per_carton: productPerCarton,
+            // product_per_carton: productPerCarton,
             quantity,
             buy_price: buyPrice,
             sale_price: salePrice,
-            paid_amount: paidAmount
+            // paid_amount: paidAmount
 
         });
 
@@ -180,7 +180,7 @@ export default function Form() {
                                     <Grid item xs={3}>Supplier Name</Grid>
                                     <Grid item xs={9}>
 
-                                        <input style={{ height: 35, width:'100%' }} type="text" placeholder='Supplier Name' {...params.inputProps} />
+                                        <input style={{ height: 35, width: '100%' }} type="text" placeholder='Supplier Name' {...params.inputProps} />
                                     </Grid>
                                 </Grid>
                             </div>
@@ -206,7 +206,7 @@ export default function Form() {
                 />
                 {/* </Grid> */}
                 {/* <Grid item xs={12} sm={6}> */}
-                <TextField
+                {/* <TextField
                     required
                     id="productpercarton"
                     name="productpercarton"
@@ -218,7 +218,7 @@ export default function Form() {
                     value={productPerCarton}
                     style={{ height: 35, marginBottom: 10 }}
                     onChange={(e) => setProductPerCarton(e.target.value)}
-                />
+                /> */}
                 {/* </Grid> */}
 
                 {/* <Grid item xs={12} sm={6}> */}
@@ -265,7 +265,7 @@ export default function Form() {
                     onChange={(e) => setSalePrice(e.target.value)}
                     style={{ height: 35, marginBottom: 10 }}
                 />
-                <TextField
+                {/* <TextField
                     required
                     id="paidamount"
                     name="paidamount"
@@ -277,7 +277,7 @@ export default function Form() {
                     value={paidAmount}
                     onChange={(e) => setPaidAmount(e.target.value)}
                     style={{ height: 35, marginBottom: 10 }}
-                />
+                /> */}
                 {/* </Grid> */}
                 <Grid item xs={12} sm={6}>
                     <Button

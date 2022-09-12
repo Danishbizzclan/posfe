@@ -18,6 +18,13 @@ export default function Home() {
             setTotalSuppliers(res.data.data.length)
 
         res = null
+        var res = await api.get('total')
+        if (res.status == 200)
+            setTotalCustomers(res.data.sumOfCustomer)
+        setTotalStock(res.data.sumOfStock)
+        setTotalSuppliers(res.data.sumOfSupplier)
+
+        res = null
         res = await api.get('customer/get_all')
         if (res.data.data == 200)
             // alert(JSON.stringify(res.data))
@@ -41,11 +48,12 @@ export default function Home() {
             <Container>
 
                 <Grid container spacing={3}>
-                    <Grid item xs={12} md={6} lg={3} ><CountCard countCard={true} title="Total Customer" count={totalCustomers} icon={<img src="./images/customer.png" width={60} />} /></Grid>
+                    <Grid item xs={12} md={6} lg={3} ><CountCard countCard={true} title="Customer Payment" count={totalCustomers} icon={<img src="./images/customer.png" width={60} />} /></Grid>
                     <Grid item xs={12} md={6} lg={3} ><CountCard countCard={true} title="Total Product" count={totalStock} icon={<img src="./images/products-icon-3.png" width={60} />} /></Grid>
-                    <Grid item xs={12} md={6} lg={3} ><CountCard countCard={true} title="Total Supplier" count={totalSuppliers} icon={<img src="./images/supplier.png" width={60} />} /></Grid>
-                    <Grid item xs={12} md={6} lg={3} ><CountCard countCard={true} title="Total Invoice" count={totalInvoice} icon={<img src="./images/invoice.png" width={60} />} /></Grid>
-
+                    <Grid item xs={12} md={6} lg={3} ><CountCard countCard={true} title="Supplier Payment" count={totalSuppliers} icon={<img src="./images/supplier.png" width={60} />} /></Grid>
+                    {/* <Grid item xs={12} md={6} lg={3} ><CountCard countCard={true} title="Total Invoice" count={totalInvoice} icon={<img src="./images/invoice.png" width={60} />} /></Grid> */}
+                </Grid>
+                <Grid container spacing={3}>
                     <Grid item xs={12} md={6} lg={3} ><CountCard link='/invoice' title="Create POS Invoice" icon={<img src="./images/pos_invoice.png" width={40} />} /></Grid>
                     <Grid item xs={12} md={6} lg={3} ><CountCard link='/addstock' title="Add Product" icon={<img src="./images/product.png" width={40} />} /></Grid>
                     <Grid item xs={12} md={6} lg={3} ><CountCard link='/addcustomer' title="Add Customer" icon={<img src="./images/add_customer.png" width={40} />} /></Grid>
